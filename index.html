@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Memory Match - Jogo de memória com temática de tecnologia. Encontre todos os pares antes que o tempo acabe!">
+  <title>Memory Match · Desafio dos Pares</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fundo: partículas decorativas geradas pelo JavaScript -->
+  <div id="bg-particles" aria-hidden="true"></div>
+
+  <div class="conteiner">
+
+    <!-- Cabeçalho semântico da página -->
+    <header>
+      <h1>🧠 Memory Match</h1>
+      <p>Encontre todos os pares de tecnologia antes que o tempo acabe!</p>
+    </header>
+
+    <!-- Placar: jogadas, pares encontrados e cronômetro -->
+    <section class="placar" aria-live="polite" aria-label="Placar do jogo">
+      <div class="placar-item">
+        <span class="placar-icone">🎯</span>
+        <span class="placar-valor" id="jogadas">0</span>
+        <span class="placar-rotulo">Jogadas</span>
+      </div>
+      <div class="placar-divisor" aria-hidden="true"></div>
+      <div class="placar-item">
+        <span class="placar-icone">✅</span>
+        <span class="placar-valor" id="pares">0/8</span>
+        <span class="placar-rotulo">Pares</span>
+      </div>
+      <div class="placar-divisor" aria-hidden="true"></div>
+      <div class="placar-item">
+        <span class="placar-icone">⏱️</span>
+        <span class="placar-valor" id="cronometro">00:00</span>
+        <span class="placar-rotulo">Tempo</span>
+      </div>
+    </section>
+
+    <!-- Status dinâmico da partida (manipulado pelo JavaScript) -->
+    <p id="status" class="status-jogo"></p>
+
+    <!-- Botão de reinício (onclick chama reiniciarJogo() do script.js) -->
+    <div class="controles">
+      <button onclick="reiniciarJogo()">🔄 Reiniciar Jogo</button>
+    </div>
+
+    <!-- Tabuleiro principal do jogo (cartas geradas pelo JavaScript) -->
+    <main id="tabuleiro" class="tabuleiro" aria-label="Tabuleiro do jogo Memory Match"></main>
+
+    <!-- Dica para o jogador -->
+    <p class="dica">💡 Clique em duas cartas para revelar e tentar encontrar um par!</p>
+
+    <!-- Histórico de partidas -->
+    <section class="historico" aria-label="Histórico de resultados">
+      <h2>📊 Histórico</h2>
+      <div class="historico-itens">
+        <p id="qtdVitorias">🏆 Vitórias: 0</p>
+        <p id="qtdEmpates">🤝 Empates: 0</p>
+        <p id="melhorTempo">⚡ Melhor Tempo: --:--</p>
+        <p id="melhorJogadas">🎯 Menor Jogadas: --</p>
+      </div>
+    </section>
+
+    <!-- Rodapé semântico da página -->
+    <footer>
+      <p><b>Desenvolvido por:</b> Desafio dos Pares · GAC116</p>
+      <p><b>Tecnologias:</b> HTML · CSS · JavaScript</p>
+      <p><b>Copyright:</b> 2025</p>
+    </footer>
+
+  </div>
+
+  <!-- Modal de Vitória (controlado pelo JavaScript) -->
+  <div id="modal" class="modal oculto" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div id="modal-fundo" class="modal-fundo"></div>
+    <div class="modal-conteudo">
+      <div class="modal-trofeu" id="modal-trofeu" aria-hidden="true">🏆</div>
+      <h2 class="modal-titulo" id="modal-titulo">Parabéns!</h2>
+      <p class="modal-mensagem" id="modal-mensagem">Você venceu o jogo!</p>
+      <div class="modal-estatisticas" id="modal-estatisticas" aria-label="Estatísticas da partida"></div>
+      <button onclick="fecharModalEReiniciar()">🚀 Jogar Novamente</button>
+    </div>
+    <!-- Confetti gerado pelo JavaScript -->
+    <div id="confetti-conteiner" aria-hidden="true"></div>
+  </div>
+
+  <!-- Arquivo JavaScript principal (JavaScript puro — sem bibliotecas externas) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
