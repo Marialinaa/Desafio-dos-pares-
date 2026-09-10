@@ -288,7 +288,7 @@ button:active {
 
 /* Hover: leve levitação nas cartas não viradas e não encontradas */
 .carta:not(.encontrada):not(.virada):hover {
-  transform: translateY(-4px) scale(1.05);
+  transform: translateY(-4px);
   filter: brightness(1.1);
 }
 
