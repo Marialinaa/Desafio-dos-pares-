@@ -15,6 +15,9 @@
   </a>
 </p>
 
+> 🚀 **Jogue online:** [https://marialinaa.github.io/Desafio-dos-pares-/](https://marialinaa.github.io/Desafio-dos-pares-/)  
+---
+
 ## Índice
 
 * [Objetivo do Jogo](#objetivo-do-jogo)
@@ -146,4 +149,12 @@ desafio-dos-pares/
 ---
 
 
-**Desenvolvido por:** Desafio dos Pares · GAC116 · UFLA · 2026
+## Informações do Projeto
+
+```json
+{
+  "nome": "Memory Match · Desafio dos Pares",
+  "descricao": "Jogo da memória interativo desenvolvido como trabalho prático para a disciplina de Programação Web (GAC116 - UFLA).",
+  "autores": "Maria Lina da Silva",
+  "turma": "14A"
+}
